@@ -13,7 +13,7 @@ end
 
 # Is tide there?
 if not type tide > /dev/null
-  curl -sL git.io/tide | source && tide_install -l
+  curl -sL git.io/tide | source && tide_install --unattended
 else
   __drenv_present tide
 end
