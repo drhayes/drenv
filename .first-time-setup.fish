@@ -12,14 +12,14 @@ else
 end
 
 # Is tide there?
-if not type tide > /dev/null
+if not type tide -q
   curl -sL git.io/tide | source && tide_install --unattended
 else
   __drenv_present tide
 end
 
 # Install fisher.
-if not type fisher > /dev/null
+if not type fisher -q
   curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 else
   __drenv_present fisher
