@@ -1,7 +1,7 @@
 #! /usr/bin/env fish
 
-function _drenv_progress -a mesg --description "Show a progress message"
-  echo (set_color blue)$mesg
+function _drenv_progress --description "Show a progress message"
+  echo (set_color blue)"$argv"(set_color normal)
 end
 
 function _drenv_present -a name --description "Show a message that things are present."
