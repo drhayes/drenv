@@ -28,6 +28,7 @@ end
 _drenv_progress Checking fisher...
 if not type fisher -q
   curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  source ~/.config/fish/functions/fisher.fish
 else
   _drenv_present fisher
 end
