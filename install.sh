@@ -28,12 +28,8 @@ main() {
 
   fi
 
-  FILE=".first-time-setup.fish"
-  curl -s "https://raw.githubusercontent.com/drhayes/drenv/main/${FILE}" -o "./${FILE}"
-
   echo Installing drhayes setup via fish
-  cat ${FILE}
-  fish ${FILE}
+  fish -c 'curl --silent "https://raw.githubusercontent.com/drhayes/drfish/main/functions/drenv-setup.fish" | source && drenv-setup'
 }
 
 main
